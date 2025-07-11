@@ -2,7 +2,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=39ff14&height=200&section=header&text=DEVENDRA%20SAHU&fontSize=45&fontColor=000000" />
 </p>
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=435&lines=Cybersecurity+Enthusiast;SOC+Analyst+Loading...+;Incident+Response+%7C+Threat+Detection;Certified+%7C+Hands-on+Driven" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=22&pause=1000&color=39FF14&center=true&vCenter=true&width=435&lines=Cybersecurity+Enthusiast;SOC+Analyst+Loading...;Incident+Response+%7C+Threat+Detection;Certified+%7C+Hands-on+Driven" />
 </p>
 
 ---
