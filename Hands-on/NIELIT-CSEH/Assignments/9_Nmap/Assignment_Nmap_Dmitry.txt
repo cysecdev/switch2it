@@ -1,0 +1,39 @@
+Nmap Assignment
+
+1.Scan and show the entire IP range using nmap.
+
+
+2.Showcase how to scan a specific port or entire port range using namp
+
+
+3.Scan and show active Host using nmap
+
+
+4. How to scan the fixed number of most popular ports using nmap. 
+
+
+5.How to detect open ports using nmap.
+
+
+6. Do a scan using nmap by excluding the host/IP addresses
+
+
+7. How to detect services and its version running in your machine using nmap
+
+
+8. Search for possible sub domains of any domain (eg:www.indeed.com) using  Dmitry tool
+
+
+9. Perform a whois lookup on any domain (eg:www.indeed.com) using Dmitry tool
+
+
+10.Using Dmitry tool perform a TCP port scan on any Host
+
+
+11.Using Dmitry tool perform a search for possible email addresses scan on any domain
+
+12. Using Netcat, copy the content of a confidential file from one machine to another machine.
+ 
+13. Using Netcat, take the shell control of one machine to another machine.
+
+14. Using nslookup & whois, gather the info. of a domain (www.indeed.com)
