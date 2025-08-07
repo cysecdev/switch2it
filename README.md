@@ -99,11 +99,15 @@ My current interest lies in **Blue Team operations**, **incident response**, and
 
 ## 📫 Contact Me
 
--  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/> [LinkedIn](https://www.linkedin.com/in/your-profile)  
--  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/> work.devend1506@gmail.com  
--  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/> [Github](https://github.com/yourusername)
-<img src="https://img.shields.io/badge/TryHackMe-212121?style=for-the-badge&logo=tryhackme&logoColor=red"/>
+<div align="center">
 
+[<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/devendra-sahu-67354529b)
+[<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />](mailto:work.devend1506@gmail.com)
+[<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/cysecdev/switch2it)
+[<img src="https://img.shields.io/badge/TryHackMe-212121?style=for-the-badge&logo=tryhackme&logoColor=red" />](https://tryhackme.com/p/cysecdev)
+[<img src="https://img.shields.io/badge/LetsDefend-0f172a?style=for-the-badge&logoColor=white" />](https://app.letsdefend.io/user/cysevdev)
+
+</div>
 
 > *“Learning by breaking, securing by understanding.”*
 
