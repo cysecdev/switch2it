@@ -11,13 +11,15 @@ A curated collection of technical notes, cheat sheets, summaries, and learning r
 
 | Category         | Description                                     |
 |------------------|-------------------------------------------------|
-| `cybersecurity/` | SOC, threat hunting, blue team, tools, etc.     |
+| `cybersecurity/` | offensive, defensive                            |
+|                  | Mobile, IOT                                     |
+| `OS/`            | Linux, Windows, IOS                             |
+|                  | Shell commands, scripting, permission           |
 | `networking/`    | CCNA notes, protocols, subnetting, etc.         |
 | `cloud/`         | AWS, Azure, GCP, cloud security basics          |
-| `linux/`         | Shell commands, scripting, permissions          |
+|                  |                                                 |
 | `certifications/`| Study notes for Sec+, CySA+, PNPT, THM etc.     |
-| `offensive/`     | Pentesting, OSINT, AD, enumeration tools        |
-| `misc/`          | Career tips, bookmarks, mindmaps, productivity  |
+| `misc/`          | Roadmap, Qna, tools&guide                       |
 
 ---
 
