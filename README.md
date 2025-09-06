@@ -23,48 +23,82 @@ My current interest lies in **Blue Team operations**, **incident response**, and
 
 ---
 
-## 📂 Portfolio Structure
+# 📂 Portfolio Structure
 
-### 🔐 [cyber-journey/](./Hands-on/)
-
-> My key learning experiences and projects grouped into one journey folder:
+## 🔐 [CYBER-JOURNEY/](./Hands-on/)
 
 <details>
-<summary><strong>📘 **NIELIT CSEH Course** – 12-week ethical hacking & network security</strong></summary>
- 
+<summary><strong>📚 CYBER-INTERNSHIP</strong></summary>
+
+<br>
+
 | Folder | Description | Skills | Tools |
 |--------|-------------|--------|-------|
-| [nielit-cseh-course/](./nielit-cseh-course/) | Assignments, notes, and labs from 12-week CSEH course | Nmap, Nikto |
-| [offensive-internship/](./offensive-internship/) | Real-world tasks, reports, exploits, and learning | Burp, Metasploit |
-| [home-soc-lab/](./home-soc-lab/) | Architecture, VM list, configurations & tool deployment | Splunk, Wazuh |
-| [ctf-writeups/](./ctf-writeups/) | Step-by-step walkthroughs for various CTF platforms | ELK Stack, Sysmon |
-| [certifications-resume/](./certifications-resume/) | Certificates and latest resume |
-| [resources-notes/](./resources-notes/) | Notes from courses, YouTube, NetAcad, and self-study |
+| [Subdomain_Enumeration/](./offensive-internship/Subdomain_Enumeration/) | Scripts & reports for subdomain discovery on target domains | Reconnaissance, Enumeration | Sublist3r, Python |
+| [Information Stealer/](./offensive-internship/Information%20Stealer/) | PoC malware to extract sensitive data from systems | Malware Dev, Data Exfiltration | Python |
+| [Port Scanner/](./offensive-internship/Port%20Scanner/) | Custom tool for scanning and identifying open ports | Scanning, Recon | Socket, Python |
+| [Network Scanner/](./offensive-internship/Network%20Scanner/) | Script for identifying active hosts & services in a subnet | Network Discovery | Scapy, Nmap |
+| [Password Cracker/](./offensive-internship/Password%20Cracker/) | General-purpose password brute-force & cracking tool | Cracking, Wordlists | Hashcat, Python |
+| [Backdoor/](./offensive-internship/Backdoor/) | Backdoor PoC with remote command execution capabilities | Persistence, Reverse Shells | Python, Netcat |
+| [modules/](./offensive-internship/modules/) | Learning modules provided during internship | Networking, Exploitation | Wireshark |
 
 </details>
+
+> 📌 *Hands-on offensive security internship projects covering reconnaissance, exploitation, and malware development.*
+
+
 <details>
-<summary><strong>🧨 **Offensive Security Internship** – Real-world pentesting & exploitation</strong></summary>
-</details>
-<details>
-<summary><strong>🏠 **Home SOC Lab** – pfSense, Splunk, Wazuh, SIEM/EDR deployments</strong></summary>
+<summary><strong> 🏠 SOC-HOME-LAB </strong></summary>
+
+<br>
+
+| Folder/File | Description | Skills | Tools |
+|-------------|-------------|--------|-------|
+| [L1/](./home-soc-lab/L1/) | SOC Level 1 monitoring tasks (log analysis, alerts, triage) | Log Monitoring, Alert Triage | Splunk, Wazuh, Sysmon |
+| [L2/](./home-soc-lab/L2/) | SOC Level 2 investigation (log correlation, threat hunting) | Threat Hunting, Incident Investigation | ELK Stack, Suricata |
+| [L3/](./home-soc-lab/L3/) | SOC Level 3 response (incident handling, forensics, malware analysis) | Incident Response, Forensics | Volatility, Wireshark |
+| [architecture-diagram.pdf](./home-soc-lab/architecture-diagram.pdf) | High-level SOC architecture of home lab setup | Network Design | Lucidchart |
+| [vm-list.md](./home-soc-lab/vm-list.md) | List of VMs with roles, specs & configurations | Lab Setup | VirtualBox, VMware |
+| [configurations/](./home-soc-lab/configurations/) | Config files for SOC tools (Splunk, Wazuh, Sysmon) | Config Management | YAML, JSON |
+| [playbooks/](./home-soc-lab/playbooks/) | IR playbooks & custom detection rules | Incident Response | Sigma, YARA |
+| [dashboards/](./home-soc-lab/dashboards/) | SOC dashboards & SIEM queries for monitoring | SIEM Analytics | Splunk, Kibana |
+| [reports/](./home-soc-lab/reports/) | Weekly/monthly SOC lab reports & findings | Documentation | Markdown, PDF |
+
 </details>
 
+> 📌 *Complete SOC lab journey — from monitoring to incident response & forensics with custom configurations and reports.*
+
+
+<details>
+<summary><strong>📘 NIELIT CSEH Course – 12-week Ethical Hacking & Network Security</strong></summary>
+
+<br>
+
+| Folder/File | Description | Skills | Tools |
+|-------------|-------------|--------|-------|
+| [assignments/](./nielit-cseh-course/assignments/) | Institute-provided assignments for hands-on practice | Scanning, Enumeration | Nmap, Nikto |
+| [modules/](./nielit-cseh-course/modules/) | Course modules (theory + lab manuals) | Networking, Exploitation | Wireshark |
+| 📄 [team-project-report.pdf](./nielit-cseh-course/team-project-report.pdf) | Report of collaborative team project during course | Teamwork, Report Writing | Documentation |
+
+</details>
+
+> 📌 *Academic foundation in ethical hacking, network security, and practical labs under NIELIT.*  
 
 ---
 
-### 🎯 [ctf-writeups/](./ctf-writeups/)
-> Write-ups from Capture the Flag (CTF) platforms:
-- 🧠 **TryHackMe** – Rooms like RootMe, Blue, Agent Sudo, MrRobot
-- 📜 [CTF Writeups](./ctf-writeups/THM/)
-- 🏆 ![TryHackMe Badge](./certifications-resume/TryHackMe_Badge.png)
-- 💻 **HackTheBox** – Basic machine exploits
+## 🔐 [CREDENTIALS/](./Certs-Doc/) 
 
----
+A collection of my **badges, resumes, certifications, and achievements**.  
+Each section shows a quick overview, and you can expand for full details.  
 
-### 📑 [credentials/](./Certs-Doc/)
-> My verified skills & proof of knowledge:
-- 📝 Updated Resume (Cyber-focused)
-- 🏆 Certificates: NIELIT CSEH, TryHackMe Badges, Cisco NetAcad, IBM, Microsoft, Splunk, etc.
+
+| Type | Description | Link |
+|------|-------------|------|
+| 🎓 Certification | Verified certifications from recognized institutions | [View Certifications](./certifications.md) |
+| 🏅 Badges | Earned digital badges showcasing skills | [View Badges](./badges.md) |
+| 📄 Resume | My professional resume for job applications | [View Resume](./resume.md) |
+| 🏆 Achievements | Extra credentials like awards & recognitions | [View Achievements](./achievements.md) |
+
 
 ---
 
