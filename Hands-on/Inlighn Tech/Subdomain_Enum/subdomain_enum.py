@@ -1,38 +1,53 @@
 import requests
 import threading
-
-domain = 'youtube.com'
-
-with open('subdomains.txt') as file:
-    subdomains = file.read().splitlines()
-
-discivered_subdomains = []
+import os
 
 lock = threading.Lock()
 
-def check_subdomain(subdomain):
+OUTPUT_FILE = "discovered_subdomains.txt"
 
-    url = f'http://{subdomain}.{domain}'
+def load_subdomains(filename="subdomains.txt"):
     try:
-        requests.get(url)
-    except requests.ConnectionError:
+        with open(filename, "r") as f:
+            return [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print("subdomains.txt file not found!")
+        return []
+    
+def check_subdomain(subdomain, domain):
+    url = f"https://{subdomain}.{domain}"
+    try:
+        response = requests.get(url, timeout=3)
+        if response.status_code < 400:
+            print(f"[+] Discovered subdomain: {url}")
+            with lock:
+                with open(OUTPUT_FILE, "a") as f:
+                    f.write(url + "\n")
+    except requests.RequestException as e:
         pass
-    else:
-        print("[+] Discovered subdomain: ", url)
-        with lock:
-            discivered_subdomains.append(url)
 
-threads = []
+def main():
+    if not os.path.exists(OUTPUT_FILE):
+        open(OUTPUT_FILE, "a").close()
 
+    domain = input("Enter the target domain: ").strip()
+    subdomains = load_subdomains()
 
-for subdomain in subdomains:
-    thread = threading.Thread(target=check_subdomain, args=(subdomain,))
-    thread.start()
-    threads.append(thread)
+    if not subdomains:
+        print("No subdomains to scan.")
+        return
+    
+    threads = []
 
-for thread in threads:
-    thread.join()
+    for sub in subdomains:
+        t = threading.Thread(target=check_subdomain, args=(sub, domain))
+        threads.append(t)
+        t.start()
+    
+    for t in threads:
+        t.join()
 
-with open("discovered_subdomains.txt", 'w') as f:
-    for subdomain in discivered_subdomains:
-        print(subdomain, file=f)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    print(f"Scan complete. Discovered subdomains are saved in {OUTPUT_FILE}")
+
+if __name__ == "__main__":
+    main()
