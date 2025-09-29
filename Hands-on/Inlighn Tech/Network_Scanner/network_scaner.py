@@ -1,51 +1,75 @@
-import scapy.all as scapy
-import socket 
-import threading
-from queue import Queue
+from scapy.all import ARP, Ether, srp
+import socket
 import ipaddress
+import csv
+from datetime import datetime
+from tabulate import tabulate
 
-def scan(ip, result_queue):
-    arp_request = scapy.ARP(pdst=ip)
-    broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
-    packet = broadcast/arp_request
-    answer = scapy.srp(packet, timeout=1, verbose=False)[0]
+TIMEOUT = 3
+DEFAULT_FILENAME = "avl-net.csv"
 
-    clients = []
-    for client in answer:
-        client_info = {'IP': client[1].psrc, 'MAC': client[1].hwsrc}
-        try:
-            hostname = socket.gethostbyaddr(client_info['IP'])[0]
-            client_info['Hostname'] = hostname
-        except socket.herror:
-            client_info['Hostname'] = 'Unknown'
-        clients.append(client_info)
-    result_queue.put(clients)
+def build_arp(cidr):
+    try:
+        ipaddress.ip_network(cidr, strict=False)
+        packet = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=cidr)
+        return packet
+    except Exception as e:
+        print(f"[!] Invalid CIDR: {e}")
+        return None
 
-def print_result(result):
-    print('IP' + " "*20 + 'MAC' + " "*20 + 'Hostname')
-    print('-'*80)
-    for client in result:
-        print(client['IP'] + '\t\t' + client['MAC'] + '\t\t' + client['Hostname'])
+def resolve_hostname(ip):
+    try:
+        return socket.gethostbyaddr(ip)[0]
+    except Exception:
+        return "Unknown"
 
-def main(cidr):
-    results_queue = Queue()
-    threads = []
-    network = ipaddress.ip_network(cidr, strict=False)
+def scan_network(cidr):
+    packet = build_arp(cidr)
+    if packet is None:
+        return []
 
-    for ip in network.hosts():
-        thread = threading.Thread(target=scan, args=(str(ip), results_queue))
-        thread.start()
-        threads.append(thread)
-    
-    for thread in threads:
-        thread.join()
-    
-    all_clients = []
-    while not results_queue.empty():
-        all_clients.extend(results_queue.get())
-    
-    print_result(all_clients)
+    print(f"[+] Scanning hosts in network {cidr} (waiting for replies)...")
+    answered = srp(packet, timeout=TIMEOUT, verbose=0)[0]
 
-if __name__ == '__main__':
-    cidr = input("Enter network ip address: ")
-    main(cidr)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    results = []
+    scan_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    for sent, received in answered:
+        ip = received.psrc
+        mac = received.hwsrc
+        hostname = resolve_hostname(ip)
+        results.append({"IP": ip, "MAC": mac, "Hostname": hostname, "ScanTime": scan_time})
+    return results
+
+def print_table(rows):
+    if not rows:
+        print("[!] No devices found.")
+        return
+    headers = ["IP", "MAC", "Hostname", "ScanTime"]
+    table = [[r["IP"], r["MAC"], r["Hostname"], r["ScanTime"]] for r in rows]
+    print("\n[+] Scan Results:\n")
+    print(tabulate(table, headers=headers, tablefmt="github"))
+
+def save_csv_default(rows):
+    fields = ["IP", "MAC", "Hostname", "ScanTime"]
+    try:
+        with open(DEFAULT_FILENAME, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(rows)
+        print(f"[+] Saved results to: {DEFAULT_FILENAME}")
+    except Exception as e:
+        print(f"[!] Could not save CSV: {e}")
+
+
+def main():
+    cidr = input("Enter CIDR (e.g., 192.168.1.0/24): ").strip()
+    rows = scan_network(cidr)
+    print_table(rows)
+
+    if rows:
+        choice = input("\nDo you want to save results as CSV? (y/n): ").strip().lower()
+        if choice == "y":
+            save_csv_default(rows)
+
+if __name__ == "__main__":
+    main()
