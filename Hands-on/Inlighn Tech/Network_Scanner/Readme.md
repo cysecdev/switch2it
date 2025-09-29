@@ -70,6 +70,7 @@ Follow prompts:
   Type `n` → no file
 
 ### Example output 
+![Terminal output sample](./docs/exp.jpg)
 
 
 ---
