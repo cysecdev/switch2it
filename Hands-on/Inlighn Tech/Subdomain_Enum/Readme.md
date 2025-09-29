@@ -1,7 +1,6 @@
 # 🔎 Subdomain Scanner
 
-A lightweight **Python-based subdomain scanner** that discovers live subdomains of a given target domain using `requests` and `threading`.  
-This project demonstrates basic **reconnaissance** techniques used in penetration testing and SOC analysis.
+A lightweight **Python-based subdomain scanner** that discovers live subdomains of a given target domain using `requests` and `threading`. This project demonstrates basic **reconnaissance** techniques used in penetration testing and SOC analysis.
 
 ---
 
@@ -42,10 +41,10 @@ pip install requests
 ## 📂 Project Structure
 ```
 subdomain_scanner.py      # Main script
-subdomains.txt            # Input file with possible subdomains (one per line)
-discovered_subdomains.txt # Output file with discovered live subdomains
+subdomains.txt            # Input file with possible subdomains
+discovered_subdomains.txt # Output file with discovered subdomains
 README.md                 # Project README (this file)
-images/                   # Optional images (architecture, terminal, folder structure)
+docs/                     # PDF &images
 ```
 
 ---
