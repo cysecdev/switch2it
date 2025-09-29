@@ -1,4 +1,4 @@
-# 🔎 Python Port Scanner
+# 🔎 Port Scanner
 
 ---
 
@@ -60,6 +60,7 @@ Follow prompts:
 * **Enter target IP or hostname** (e.g., `127.0.0.1` or `scanme.nmap.org`).
 * **Enter start port** and **end port** (e.g., `1` and `1024`).
 * **Include UDP scan? (Y/N)** — optional; UDP probes are slower and less certain.
+![Terminal output sample](./docs/udp.jpg)
 
 ---
 
