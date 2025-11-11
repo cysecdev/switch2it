@@ -17,7 +17,7 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 
 # 📂 Portfolio Structure
 
-## 🔐 [CYBER-JOURNEY/](./Hands-on/)
+## 🔐 [CYBER-JOURNEY/](./Hands_on/)
 
 <details>
 <summary><strong>📚 CYBER-INTERNSHIP</strong></summary>
@@ -26,13 +26,12 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 
 | Folder | Description | Skills | Tools |
 |--------|-------------|--------|-------|
-| [Subdomain_Enumeration/](./offensive-internship/Subdomain_Enumeration/) | Scripts & reports for subdomain discovery on target domains | Reconnaissance, Enumeration | Sublist3r, Python |
-| [Information Stealer/](./offensive-internship/Information%20Stealer/) | PoC malware to extract sensitive data from systems | Malware Dev, Data Exfiltration | Python |
-| [Port Scanner/](./offensive-internship/Port%20Scanner/) | Custom tool for scanning and identifying open ports | Scanning, Recon | Socket, Python |
-| [Network Scanner/](./offensive-internship/Network%20Scanner/) | Script for identifying active hosts & services in a subnet | Network Discovery | Scapy, Nmap |
-| [Password Cracker/](./offensive-internship/Password%20Cracker/) | General-purpose password brute-force & cracking tool | Cracking, Wordlists | Hashcat, Python |
-| [Backdoor/](./offensive-internship/Backdoor/) | Backdoor PoC with remote command execution capabilities | Persistence, Reverse Shells | Python, Netcat |
-| [modules/](./offensive-internship/modules/) | Learning modules provided during internship | Networking, Exploitation | Wireshark |
+| [Subdomain_Enumeration/](./Hands_on/Inlighn_Tech/Subdomain_Enum) | Scripts & reports for subdomain discovery on target domains | Reconnaissance, Enumeration | Sublist3r, Python |
+| [Information Stealer/](./Hands_on/Inlighn_Tech/Information_Stealer) | PoC malware to extract sensitive data from systems | Malware Dev, Data Exfiltration | Python |
+| [Port Scanner/](./Hands_on/Inlighn_Tech/Port_Scanner) | Custom tool for scanning and identifying open ports | Scanning, Recon | Socket, Python |
+| [Network Scanner/](./Hands_on/Inlighn_Tech/Network_Scanner) | Script for identifying active hosts & services in a subnet | Network Discovery | Scapy, Nmap |
+| [Backdoor/](./Hands_on/Inlighn_Tech/Backdoor) | Backdoor PoC with remote command execution capabilities | Persistence, Reverse Shells | Python, Netcat |
+| [modules/](./Hands_on/Inlighn_Tech/Modules) | Learning modules provided during internship | Networking, Exploitation | Wireshark |
 
 </details>
 
@@ -66,11 +65,11 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 
 <br>
 
-| Folder/File | Description | Skills | Tools |
-|-------------|-------------|--------|-------|
-| [assignments/](./nielit-cseh-course/assignments/) | Institute-provided assignments for hands-on practice | Scanning, Enumeration | Nmap, Nikto |
-| [modules/](./nielit-cseh-course/modules/) | Course modules (theory + lab manuals) | Networking, Exploitation | Wireshark |
-| 📄 [team-project-report.pdf](./nielit-cseh-course/team-project-report.pdf) | Report of collaborative team project during course | Teamwork, Report Writing | Documentation |
+| Folder/File | Description |
+|-------------|-------------|
+| [assignments/](./Hands_on/NIELIT_CSEH/Assignments) | Institute-provided assignments for hands-on practice |
+| [modules/](./Hands_on/NIELIT_CSEH/Modules) | Course modules (theoretical-notes) |
+| 📄 [PROJECT-SnortShield_Network.pdf](./Hands_on/NIELIT_CSEH/PROJECT-SnortShield_Network.pdf) | Documentation of collaborative team project during course |
 
 </details>
 
@@ -78,17 +77,15 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 
 ---
 
-## 🔐 [CREDENTIALS/](./Credential/) 
+## 🪪 [CREDENTIALS/](./Credential/) 
 
-> A collection of my **badges, resumes, certifications, and achievements**.  
+> Certifications, badges, and milestones that reflect my continuous cybersecurity learning journey.  
 
 | Type | Description | Link |
 |------|-------------|------|
 | 🎓 Certification | Verified certifications from recognized institutions | [View Certifications](./Credential/README.md) |
 | 🏆 Achievements | Earned digital badges & free certs showcasing skills | [View Achievements](./Credential/README.md) |
 | 📄 Resume | My professional resume for job applications | [View Resume](./Credential/README.md) |
-
-
 
 ---
 
@@ -105,13 +102,11 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 ## 💡 Skills & Tools
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Linux-black?style=for-the-badge&logo=linux&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Nmap-007ACC?style=for-the-badge&logo=nmap&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Wireshark-1684FC?style=for-the-badge&logo=wireshark&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Burp%20Suite-ff6600?style=for-the-badge&logo=burpsuite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Metasploit-blue?style=for-the-badge&logo=metasploit&logoColor=white"/>
-  <img src="https://img.shields.io/badge/OWASP_ZAP-032541?style=for-the-badge&logo=OWASP&logoColor=white"/>
   <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows11&logoColor=white" alt="Windows"/>
+  <img src="https://img.shields.io/badge/OWASP_ZAP-032541?style=for-the-badge&logo=OWASP&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 </p>
 
 | Category | Red Team 🧨 | Blue Team 🛡️ |
@@ -131,7 +126,6 @@ Hi, I'm Devendra — a cybersecurity learner shaping my skills through structure
 [<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />](https://github.com/cysecdev/switch2it)
 [<img src="https://img.shields.io/badge/TryHackMe-212121?style=for-the-badge&logo=tryhackme&logoColor=red" />](https://tryhackme.com/p/cysecdev)
 [<img src="https://img.shields.io/badge/LetsDefend-0f172a?style=for-the-badge&logoColor=white" />](https://app.letsdefend.io/user/cysevdev)
-
 </div>
 
 > *“Learning by breaking, securing by understanding.”*
