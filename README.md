@@ -9,15 +9,7 @@
 
 ## 👋 About Me
 
-Hi, I'm Devendra — a cybersecurity learner shaping my skills through structured learning, hands-on labs, and real-world scenarios.
-
-Through a structured ethical hacking course, I gained a solid foundation in **network security, reconnaissance, and web application vulnerabilities**.
-
-During my offensive security internship, I applied that knowledge to simulate **real-world attacks**, document exploits, and understand **red team operations** from both technical and reporting perspectives.
-
-To deepen my defensive skills, I built a **home SOC lab** where I actively practice **log analysis**, **alert triage**, and **threat detection** using tools like ELK, Splunk, Snort, and pfSense.
-
-My current interest lies in **Blue Team operations**, **incident response**, and **CTF-style problem solving** — backed by daily practice on **TryHackMe** and **LetsDefend**.
+Hi, I'm Devendra — a cybersecurity learner shaping my skills through structured learning, hands-on labs, and real-world scenarios.Through a structured ethical hacking course, I gained a solid foundation in **network security, reconnaissance, and web application vulnerabilities**.During my offensive security internship, I applied that knowledge to simulate **real-world attacks**, document exploits, and understand **red team operations** from both technical and reporting perspectives.
 
 > I treat cybersecurity as a craft — the more I break and analyze, the more I learn how to defend.
 
@@ -86,28 +78,27 @@ My current interest lies in **Blue Team operations**, **incident response**, and
 
 ---
 
-## 🔐 [CREDENTIALS/](./Certs-Doc/) 
+## 🔐 [CREDENTIALS/](./Credential/) 
 
-A collection of my **badges, resumes, certifications, and achievements**.  
-Each section shows a quick overview, and you can expand for full details.  
-
+> A collection of my **badges, resumes, certifications, and achievements**.  
 
 | Type | Description | Link |
 |------|-------------|------|
-| 🎓 Certification | Verified certifications from recognized institutions | [View Certifications](./certifications.md) |
-| 🏅 Badges | Earned digital badges showcasing skills | [View Badges](./badges.md) |
-| 📄 Resume | My professional resume for job applications | [View Resume](./resume.md) |
-| 🏆 Achievements | Extra credentials like awards & recognitions | [View Achievements](./achievements.md) |
+| 🎓 Certification | Verified certifications from recognized institutions | [View Certifications](./Credential/README.md) |
+| 🏆 Achievements | Earned digital badges & free certs showcasing skills | [View Achievements](./Credential/README.md) |
+| 📄 Resume | My professional resume for job applications | [View Resume](./Credential/README.md) |
+
 
 
 ---
 
 ### 📚 [resources-notes/](./Resource/)
-> Documentation of what I’m learning, tools I use, and useful references:
-- 🧰 Tools list (Nmap, Burp, Wireshark, Splunk, etc.)
-- 📘 Notes from NetAcad, YouTube, and SOC/DFIR labs
-- 📜 THM & LetsDefend learning summaries
-- 🔗 Free Certification & Resource Tracker
+> collection of cybersecurity PDFs providing a guided, conceptual path to understand practical workflows, tools, and ideologies
+- **🛡️ Cybersecurity:** Notes on SOC, DFIR, and VAPT — explaining core concepts, frameworks, tools & methodologies.
+- **💻 Operating Systems:** Linux and Windows guides with essential commands, admin references, and security-focused Cheatsheet.
+- **🌐 Networking:** Simplified summaries on network protocols, addressing, devices, and packet flow fundamentals.
+- **☁️ Cloud:** Foundational learning on AWS, Azure, and GCP — focusing on architecture, IAM, and cloud security practices.
+- **🧭 Misc:** Learning roadmaps, Q&A references, and curated study resources to support continuous learning.
 
 ---
 
@@ -123,11 +114,11 @@ Each section shows a quick overview, and you can expand for full details.
   <img src="https://img.shields.io/badge/VirtualBox-183A61?style=for-the-badge&logo=virtualbox&logoColor=white"/>
 </p>
 
-| Red Team 🧨 | Blue Team 🛡️ | Other ⚙️ |
-|------------|--------------|----------|
-| Nmap, Nikto, Burp, Metasploit | Splunk, Wazuh, ELK Stack, Sysmon | windows, linux |
-| Privilege Escalation, Enumeration | Log Analysis, Alert Triage, SIEM | Python (basic), Bash, Markdown |
-| Web Exploitation, Reverse Shells | Incident Response, Threat Hunting | Cisco NetAcad, THM, LetsDefend |
+| Category | Red Team 🧨 | Blue Team 🛡️ |
+|---------:|:-----------|:------------|
+| **Tools** | Nmap, Nikto, Burp, Metasploit — reconnaissance and exploitation toolset for web and network testing. | Splunk, Wazuh, ELK Stack, Sysmon — logging, detection, and endpoint telemetry for monitoring & investigations. |
+| **Techniques** | Privilege escalation, enumeration, web exploitation — core offensive approaches to gain and expand access. | Log analysis, alert triage, SIEM workflows — core defensive practices to detect and validate incidents. |
+| **Expertise** | Web exploitation, reverse shells, exploit chaining — practical offensive skill areas demonstrated in learning labs. | Incident response, threat hunting, containment & recovery — defensive specialties focused on real-world SOC tasks. |
 
 ---
 
